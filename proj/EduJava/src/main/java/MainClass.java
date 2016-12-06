@@ -5,5 +5,6 @@ public class MainClass {
     public static void main(String [] arg){
         TextForPrint tfp = new TextForPrint();
         tfp.prText();
+
     }
 }
