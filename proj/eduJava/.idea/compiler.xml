@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="eduJava" />
+        <module name="EduJava" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="eduJava" target="1.5" />
+      <module name="EduJava" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
