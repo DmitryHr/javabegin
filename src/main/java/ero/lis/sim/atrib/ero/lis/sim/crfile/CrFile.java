@@ -7,28 +7,36 @@ package ero.lis.sim.atrib.ero.lis.sim.crfile;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import ero.lis.sim.atrib.*;
 public class CrFile {
-        public void createFile() throws IOException {
 
-            //Создаем переменную типа String, указываем формат даты и передаем текущую дату
-            String curDate = new SimpleDateFormat("dd_mm_yyyy").format(new Date()).toString();
+    //Создаем переменную типа String, указываем формат даты и передаем текущую дату
+    String curDate = new SimpleDateFormat("YYYY_MM_dd_HH_mm_ss_SSS").format(new Date()).toString();
 
-            //Создаем обьект sim типа File, указываем где создать и что создать
-            File sim = new File("c://Users//Alcom//Desktop", curDate + ".txt");
-            PrintWriter simPrint = new PrintWriter(sim);
+    //Создаем обьект sim типа File, указываем где создать и что создать
+    File sim = new File("c://Users//Alcom//Desktop", curDate + ".txt");
+    PrintWriter simPrint;
+    public String s;
 
-
-            try{
-                sim.createNewFile();
-                System.out.println("Файл создан");
-                simPrint.write("text");
-                simPrint.flush();
-                System.out.println("Текст введен");
+    public void createFile() throws IOException {
+        if(sim.createNewFile()){
+            System.out.println("Файл " + curDate + ".txt " + "создан");
             }
-            catch(IOException e){
-                System.out.print("Ошибка " + e);
+            else {
+            System.out.println("File alredy exists");
             }
-
         }
+
+    public void writeFile(String valueAttribute){
+        try{
+            simPrint = new PrintWriter(sim);
+            simPrint.write(valueAttribute);
+            simPrint.flush();
+        }
+
+        catch (IOException e){
+            System.out.println("Ошибка" + e);
+        }
+    }
 
 }
