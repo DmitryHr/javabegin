@@ -8,8 +8,9 @@ public class Main {
 
         Computer comp = new Computer();
 
-        comp.name="IBM";
-        comp.hdd=350;
+        comp.setName("IBM");
+        comp.setRam(1);
+        comp.setHdd(350);
 
         comp.on();
         comp.load();

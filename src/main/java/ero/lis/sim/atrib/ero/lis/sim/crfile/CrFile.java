@@ -4,10 +4,11 @@ package ero.lis.sim.atrib.ero.lis.sim.crfile;
  * Created by Alcom on 26.12.2016.
  */
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import ero.lis.sim.atrib.*;
 public class CrFile {
 
     //Создаем переменную типа String, указываем формат даты и передаем текущую дату
