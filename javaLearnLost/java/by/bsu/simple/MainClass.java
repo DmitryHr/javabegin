@@ -1,5 +1,7 @@
 package by.bsu.simple;
 
+import by.bsu.find.bean.Coin;
+
 /**
  * Created by Alcom on 29.06.2017.
  */

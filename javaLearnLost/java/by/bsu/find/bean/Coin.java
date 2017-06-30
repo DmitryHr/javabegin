@@ -1,4 +1,4 @@
-package by.bsu.simple;
+package by.bsu.find.bean;
 
 /**
  * Created by Alcom on 29.06.2017.
@@ -13,7 +13,7 @@ public class Coin {
     public void setDiameter(double value){
         if(value > 0){
             diameter = value;
-            System.out.println("diameter " + diameter);
+           // System.out.println("diameter " + diameter);
         }else{
             System.out.println(diameter +" отрицательное число");
         }
